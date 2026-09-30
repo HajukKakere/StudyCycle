@@ -1,6 +1,6 @@
 /* =====================================================
    THE STUDY CYCLE — FINAL PROFESSIONAL DESIGN
-   Elegant • Clean • Responsive & Image-Safe
+   Elegant • Clean • Responsive & Cycle-Themed
    ===================================================== */
 
 /* =====================================================
@@ -73,7 +73,7 @@ li {
 }
 
 /* =====================================================
-   5. HEADER (Hero Section ya Kisasa)
+   5. HEADER (Hero Section yenye Uhuishaji wa Cycle)
    ===================================================== */
 header {
     background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%);
@@ -85,15 +85,23 @@ header {
     border-bottom: 5px solid var(--gold);
 }
 
+/* Duara la mng'ao linalozunguka kuleta maana ya 'Cycle' */
 header::before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(212, 160, 23, 0.2) 0%, transparent 70%);
-    top: -150px;
-    left: -150px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(212, 160, 23, 0.25) 0%, transparent 70%);
+    top: -120px;
+    right: -120px;
     border-radius: 50%;
+    animation: rotateCycle 15s linear infinite;
+}
+
+@keyframes rotateCycle {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.08); }
+    100% { transform: rotate(360deg) scale(1); }
 }
 
 /* =====================================================
@@ -237,7 +245,6 @@ h2::after {
     border-color: rgba(212, 160, 23, 0.4);
 }
 
-/* Ulinzi wa Picha za Kadi za Wanachama */
 .member img {
     width: 135px;
     height: 135px;
@@ -293,7 +300,6 @@ h2::after {
     text-align: center;
 }
 
-/* Video & Audio ndani ya Kadi */
 .member video, .member audio {
     width: 100%;
     margin-top: 15px;
@@ -306,14 +312,13 @@ h2::after {
 }
 
 /* =====================================================
-   12. MEMORIES SECTION (Picha Zisionekane Zimekatwa)
+   12. MEMORIES SECTION (Picha Zinaonekana Zote bila Kukatwa)
    ===================================================== */
 #memories {
     background-color: var(--memory-bg);
     border: 1px solid #FDE68A;
 }
 
-/* Zinatumia contain ili picha zote zionekane kwa ukamilifu wake */
 #memories img {
     width: 100%;
     max-height: 500px;
@@ -330,7 +335,7 @@ h2::after {
 }
 
 /* =====================================================
-   13. NOTE FROM HAJUK (Picha na Video Zisionekane Zimekatwa)
+   13. NOTE FROM HAJUK (Picha na Video Salama bila Kukatwa)
    ===================================================== */
 #note {
     background: var(--white);
@@ -342,7 +347,7 @@ h2::after {
     max-height: 550px;
     height: auto;
     object-fit: contain;
-    background-color: #000000; /* Nyekundu/Nyeusi nzuri kwa video */
+    background-color: #000000;
     border-radius: 14px;
     margin: 20px 0;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -351,7 +356,6 @@ h2::after {
     margin-right: auto;
 }
 
-/* Mandhari maalum kwa ajili ya picha ya mwisho ya Hajuk (hl.png) */
 #note img {
     background-color: #f8fafe;
 }
